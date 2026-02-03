@@ -43,6 +43,9 @@ int main()
             std::cout << std::fixed << std::setprecision(6);
             std::cout << "Transition energy: " << E << " eV" << std::endl;
         }
+        // Ask user if they want to repeat the calculation.
+        std::cout << "Do you want to perform another calculation? (y/n): ";
+        std::cin >> repeat;
     } while (repeat == 'y');
     
 }
