@@ -9,6 +9,7 @@ int main()
 {
     // Define constants.
     const double R = 13.6; // Rydberg constant in eV.
+    const double eV_to_J = 1.602e-19; // Conversion factor from eV to Joules.
     
     // Requesting variables from user. Will need to implement checks for invalid inputs later.
     int units, Z, n_i, n_j; // Units calculation is printed in, atomic number, initial and final principal quantum numbers.
@@ -29,7 +30,7 @@ int main()
     // Look into asking for precision, need joules in standard form most likely.
     if (units == 1)
     {
-        E = E * 1.602e-19; // Convert eV to Joules, term is from UoM physical constants sheet.
+        E = E * eV_to_J; // Convert eV to Joules, term is from UoM physical constants sheet.
         std::cout << std::fixed << std::setprecision(20);
         std::cout << "Transition energy: " << E << " J" << std::endl;
     }
@@ -39,5 +40,4 @@ int main()
         std::cout << "Transition energy: " << E << " eV" << std::endl;
     }
     
-
 }
