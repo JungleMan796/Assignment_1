@@ -11,7 +11,7 @@ int main()
     const double R = 13.6; // Rydberg constant in eV.
     
     // Requesting variables from user.
-    int Z, n_i, n_j; // Atomic Number, initial and final principal quantum numbers.
+    int units, Z, n_i, n_j; // Units calculation is printed in, atomic number, initial and final principal quantum numbers.
 
     std::cout << "Enter atomic number Z: ";
     std::cin >> Z;
@@ -19,4 +19,7 @@ int main()
     std::cin >> n_i;
     std::cout << "Enter final quantum number n_j: ";
     std::cin >> n_j;
+    std::cout << "Enter units (0 for eV, 1 for Joules): ";
+    std::cin >> units;
+    
 }
