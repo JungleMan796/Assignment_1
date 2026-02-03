@@ -35,7 +35,15 @@ int main()
         }
 
         std::cout << "Enter final principal quantum number n_j: ";
-        std::cin >> n_j;
+        while (!(std::cin >> n_j) || n_j < 1 || n_j > n_i) // Input validation for final principal quantum number.
+        {
+            std::cin.clear();
+            std::cin.ignore(10000, '\n');
+            // Perhaps should specify that n_j must be less than n_i for a transition to occur first.
+            // Also is the below sentance too long?
+            std::cout << "Invalid input for final principal quantum number n_j. Enter a positive integer, greater than or equal to 1 and that is less than n_i: ";
+        }
+
         std::cout << "Enter units (0 for eV, 1 for Joules): ";
         std::cin >> units;
         
