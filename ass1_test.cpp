@@ -45,7 +45,12 @@ int main()
         }
 
         std::cout << "Enter units (0 for eV, 1 for Joules): ";
-        std::cin >> units;
+        while (!(std::cin >> units) || (units != 0 && units != 1)) // Input validation for units choice.
+        {
+            std::cin.clear();
+            std::cin.ignore(10000, '\n');
+            std::cout << "Invalid input for units. Enter 0 for eV or 1 for Joules: ";
+        }
         
         // Compute transition energy using Bohr formula.
         double E = R * Z * Z * ((1 / (n_j * n_j)) - (1 / (n_i * n_i))); // Transition energy in eV.
