@@ -7,7 +7,10 @@
 
 int main()
 {
-    // Declare variables.
+    // Define constants.
+    const double R = 13.6; // Rydberg constant in eV.
+    
+    // Requesting variables from user.
     int Z, n_i, n_j; // Atomic Number, initial and final principal quantum numbers.
 
     std::cout << "Enter atomic number Z: ";
