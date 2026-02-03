@@ -70,7 +70,12 @@ int main()
         }
         // Ask user if they want to repeat the calculation.
         std::cout << "Do you want to perform another calculation? (y/n): ";
-        std::cin >> repeat;
+        while (!(std::cin >> repeat) || (repeat != 'y' && repeat != 'n')) // Input validation for repeat choice.
+        {
+            std::cin.clear();
+            std::cin.ignore(10000, '\n');
+            std::cout << "Invalid input. Enter 'y' to perform another calculation or 'n' to exit: ";
+        }
     } while (repeat == 'y');
     
 }
