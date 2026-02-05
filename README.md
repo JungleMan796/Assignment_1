@@ -8,6 +8,6 @@ This later extends to variables that decide what units the energy is returned in
 The computation of the transistion energy in eV was programmed followed by the output of it in either eV or Joules.
 Then the decision to remain or leave the calulation loop was implemented.
 
-The validation for all user inputted variables was developed.
+The testing of and recovery for all user inputted variables was developed.
 
 Output of transition energy in Joules was later changed to standard form.
